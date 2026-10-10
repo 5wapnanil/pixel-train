@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e0b1a" />
+    <meta
+      name="description"
+      content="Intercity Pixel Train — a pixel-art journey through Bangladesh."
+    />
+    <title>Intercity Pixel Train</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">IPT</div>
+        <div>
+          <p class="eyebrow">BANGLADESH RAILWAYS // ROUTE 01</p>
+          <h1>Intercity Pixel Train</h1>
+        </div>
+        <div class="topbar-signal" aria-label="Simulation status">
+          <span class="signal-dot"></span>
+          <span>LIVE JOURNEY</span>
+        </div>
+      </header>
+
+      <main class="game-layout">
+        <section class="scene-panel" aria-label="Train journey scene">
+          <div class="screen-frame">
+            <canvas id="game-canvas" width="320" height="180">
+              Your browser does not support HTML canvas.
+            </canvas>
+            <div class="screen-glare" aria-hidden="true"></div>
+            <div class="screen-corners" aria-hidden="true"></div>
+          </div>
+
+          <div class="journey-readout">
+            <div class="station-readout">
+              <span class="readout-label">CURRENT STATION</span>
+              <strong id="station-name">KAMALAPUR</strong>
+              <span id="station-region">DHAKA // DHK</span>
+            </div>
+            <div class="journey-progress" aria-label="Journey progress">
+              <div class="progress-track">
+                <span id="progress-fill"></span>
+              </div>
+              <div class="progress-meta">
+                <span>DEPARTURE</span>
+                <span id="journey-status">EN ROUTE</span>
+                <span>NEXT STOP</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="control-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">CONTROL CAB</p>
+              <h2>Journey controls</h2>
+            </div>
+            <span class="panel-code">M-01</span>
+          </div>
+
+          <div class="control-stack">
+            <button class="control-button" id="pause-button" type="button">
+              <span class="button-icon" aria-hidden="true">Ⅱ</span>
+              <span>
+                <strong id="pause-label">PAUSE JOURNEY</strong>
+                <small>SPACE / P</small>
+              </span>
+            </button>
+            <button class="control-button" id="speed-button" type="button">
+              <span class="button-icon button-icon-speed" aria-hidden="true">×2</span>
+              <span>
+                <strong id="speed-label">TRAVEL SPEED 1×</strong>
+                <small>TOGGLE CRUISE SPEED</small>
+              </span>
+            </button>
+            <button class="control-button" id="next-button" type="button">
+              <span class="button-icon" aria-hidden="true">››</span>
+              <span>
+                <strong>NEXT STATION</strong>
+                <small>N / SKIP AHEAD</small>
+              </span>
+            </button>
+          </div>
+
+          <div class="route-card">
+            <div class="route-card-heading">
+              <span class="readout-label">LINE MAP</span>
+              <span class="route-length">2 STOPS</span>
+            </div>
+            <ol class="station-list" id="station-list"></ol>
+          </div>
+
+          <p class="panel-note">
+            Keep the train moving and watch the landscape change behind the
+            carriages.
+          </p>
+        </aside>
+      </main>
+
+      <footer class="site-footer">
+        <span>MILESTONE 01 // PIXEL JOURNEY SYSTEM</span>
+        <span>CANVAS DISPLAY 320 × 180</span>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
